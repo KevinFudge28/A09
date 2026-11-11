@@ -1,0 +1,266 @@
+
+/* Set the accent color */
+:root {
+    --accent-color: #f6bb73;
+}
+
+/* Remove default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set spacing for headings, paragraphs, and lists */
+h1, h2, h3, p, ul {
+    padding-top: .25em;
+    padding-bottom: .25em;
+}
+
+/* Set list spacing */
+ul {
+    margin-left: 2em;
+}
+
+/* Set the body width and font */
+body {
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+    border: 2px solid var(--accent-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(90% + .2vw);
+    line-height: 1.5;
+}
+
+/* Header styling */
+header {
+    border-bottom: 2px solid var(--accent-color);
+    background: linear-gradient(
+        30deg,
+        #f6bb73 0%,
+        white 30%,
+        white 65%,
+        #f6bb73 100%
+    );
+    line-height: 1.2;
+    overflow: auto;
+}
+
+
+/* Menu colors */
+:root {
+    --light-menu-color: white;
+    --mid-menu-color: antiquewhite;
+    --dark-menu-color: #8a4b08;
+}
+
+/* Main navigation menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Menu list items */
+.menu li {
+    flex-basis: 20%;
+    text-align: center;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: var(--accent-color);
+}
+
+/* Navigation links */
+.navbar a {
+    display: block;
+    padding: 1em;
+    margin: 0 1px 2px;
+    text-decoration: none;
+    color: var(--light-menu-color);
+}
+
+/* Hover, focus, and current page */
+.navbar a:hover,
+.navbar a:focus,
+.navbar a.current {
+    background-color: var(--mid-menu-color);
+    color: var(--dark-menu-color);
+}
+
+/* Remove bullets and default spacing */
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Dropdown parent */
+.menu li:has(.submenu) {
+    position: relative;
+}
+
+/* Space between text and dropdown arrow */
+.menu small {
+    padding-left: 0.5em;
+}
+
+/* Dropdown menu */
+.submenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    color: var(--light-menu-color);
+    display: none;
+    z-index: 10;
+}
+
+/* Show dropdown when hovering over parent */
+.menu li:hover > .submenu {
+    display: block;
+}
+
+/* Dropdown link spacing */
+.submenu > li a {
+    margin: 0 2px 2px;
+}
+
+/* First and last menu item spacing */
+.menu > li:first-child a {
+    margin-left: 0;
+}
+
+.menu > li:last-child a {
+    margin-right: 0;
+}
+
+
+/* Logo image */
+header img {
+    width: 100%;
+    min-width: 40px;
+    max-width: 80px;
+    float: left;
+    margin: .75em 1em;
+}
+
+/* Main uses Flexbox */
+main {
+    display: flex;
+    padding: 1em;
+}
+
+/* Guest speakers sidebar */
+aside {
+    flex-basis: 25%;
+    padding-right: 1em;
+}
+
+/* Guest speaker images - all the same size */
+aside img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 4px double var(--accent-color);
+    border-radius: 10px;
+    display: block;
+}
+
+/* Main content section */
+section {
+    flex-basis: 75%;
+    padding-left: 1em;
+}
+
+/* Section headings */
+section h1 {
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Featured speaker article */
+.featured {
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding: .5em 0;
+    margin-top: 1em;
+}
+
+/* Featured speaker image */
+.featured img {
+    width: 100%;
+    min-width: 100px;
+    max-width: 250px;
+    height: auto;
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    border: 4px double var(--accent-color);
+    border-radius: 10px;
+}
+
+/* Make all speaker pictures the same size */
+main img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px double var(--accent-color);
+    border-radius: 10px;
+    display: block;
+}
+
+/* Clear the floated image */
+.featured::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.speaker::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Blockquote styling */
+blockquote {
+    font-style: italic;
+    padding: 0 2em;
+}
+
+/* Link styling */
+a {
+    color: #8a4b08;
+}
+
+a:hover {
+    color: #c06b0a;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--accent-color);
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+/* Speaker page styling */
+.speaker h1 {
+    color: var(--accent-color);
+}
+
+.speaker h2 {
+    color: black;
+}
+
+.speaker p {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
